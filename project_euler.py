@@ -89,3 +89,15 @@ def smallest_multiple():
         l[1] = number
         del l[0]
     return l[0]
+
+
+def square_diff():
+    """
+        ID: 6
+        Returns the difference between sum of squares and square of sum
+    """
+    a, b = 0, 0
+    for x in range(101):
+        a += x
+        b += pow(x, 2)
+    return pow(a, 2) - b
