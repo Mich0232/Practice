@@ -55,4 +55,17 @@ def prime_factors(number):
             factors.append(int(number))
             break
     return factors
-# print(max(prime_factors(600851475143))) # largest prime factor
+
+
+def palindrome_numbers():
+    """
+        ID: 4
+        Returns list of palindrome numbers
+    """
+    palindromes = []
+    for x in range(100, 999):
+        for y in range(100, 999):
+            number = x *y
+            if str(number) == str(number)[::-1]:
+                palindromes.append(number)
+    return palindromes
