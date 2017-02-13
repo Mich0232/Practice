@@ -46,7 +46,7 @@ def prime_factors(number):
     limit = int(math.sqrt(number))
     factors = []
     while number != 1:
-        for x in range(2, limit):
+        for x in range(2, limit  + 1):
             if number % x == 0:
                 number = number / x
                 factors.append(x)
@@ -69,3 +69,23 @@ def palindrome_numbers():
             if str(number) == str(number)[::-1]:
                 palindromes.append(number)
     return palindromes
+
+
+def lcm(a, b):
+    """
+        Return lowest common multiple of a and b
+    """
+    return a*b//math.gcd(a, b)
+
+
+def smallest_multiple():
+    """
+        ID: 5
+        Returns number that is evenly divisible by all of the numbers from 1 to 20
+    """
+    l = [d for d in range(2, 20)]
+    while len(l) > 1:
+        number = lcm(l[0], l[1])
+        l[1] = number
+        del l[0]
+    return l[0]
