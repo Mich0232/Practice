@@ -13,7 +13,7 @@ def sum_of_multiplies(cap):
     return sum(filter(func, l))
 
 
-def fibonacci():
+def fibonacci_gen():
     """Fibonacci numbers generator"""
     x, y = 1, 2
     while 1:
@@ -26,13 +26,13 @@ def even_fibonacci(cap):
         ID: 2
         Returns sum of all even fibonacci numbers
     """
-    fib, sum = fibonacci(), 0
+    fib, sum_ = fibonacci_gen(), 0
     number = next(fib)
     while number < cap:
         if number % 2 == 0:
-            sum += number
+            sum_ += number
         number = next(fib)
-    return sum
+    return sum_
 
 
 def prime_factors(number):
@@ -46,7 +46,7 @@ def prime_factors(number):
     limit = int(math.sqrt(number))
     factors = []
     while number != 1:
-        for x in range(2, limit  + 1):
+        for x in range(2, limit + 1):
             if number % x == 0:
                 number = number / x
                 factors.append(x)
@@ -65,7 +65,7 @@ def palindrome_numbers():
     palindromes = []
     for x in range(100, 999):
         for y in range(100, 999):
-            number = x *y
+            number = x * y
             if str(number) == str(number)[::-1]:
                 palindromes.append(number)
     return palindromes
@@ -75,7 +75,7 @@ def lcm(a, b):
     """
         Return lowest common multiple of a and b
     """
-    return a*b//math.gcd(a, b)
+    return a *b // math.gcd(a, b)
 
 
 def smallest_multiple():
@@ -92,8 +92,7 @@ def smallest_multiple():
 
 
 def square_diff():
-    """
-        ID: 6
+    """ ID: 6
         Returns the difference between sum of squares and square of sum
     """
     a, b = 0, 0
@@ -101,3 +100,21 @@ def square_diff():
         a += x
         b += pow(x, 2)
     return pow(a, 2) - b
+
+
+def prime_numbers_gen():
+    """ Prime numbers generator"""
+    x = 2
+    while 1:
+        if prime_factors(x)[0] == x:
+            yield x
+        x += 1
+
+
+def prime_numbers(n):
+    """ ID: 7
+        Returns 'n'th prime number """
+    gen = prime_numbers_gen()
+    for _ in range(n-1):
+        next(gen)
+    return next(gen)
