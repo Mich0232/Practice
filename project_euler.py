@@ -189,9 +189,9 @@ def sum_of_primes():
     """ ID: 10
         Return sum of all primes below 2 millions"""
     gen = prime_numbers_gen()
-    sum_ = 0
+    sum_ = 5
     prime = next(gen)
     while prime < 2000000:
         sum_ += prime
         prime = next(gen)
-    print(sum_)
+    return sum_
