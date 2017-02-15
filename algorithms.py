@@ -12,9 +12,7 @@ def fibonacci_gen():
 
 
 def lcm(a, b):
-    """
-        Return lowest common multiple of a and b
-    """
+    """ Return lowest common multiple of a and b """
     return a * b // math.gcd(a, b)
 
 
