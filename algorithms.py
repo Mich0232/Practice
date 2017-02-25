@@ -41,3 +41,7 @@ def pythagorean_triplet_gen():
         yield [a, b, c]
         n += 1
         m += 1
+
+
+if __name__ == '__main__':
+    pass
