@@ -136,6 +136,10 @@ def get_fullname():
     return "Marek-Marcin Zuckerberg"
 
 
+def get_number(x):
+    return x
+
+
 def get_current_date():
     import datetime
     return datetime.datetime.now()
