@@ -133,7 +133,7 @@ def sum_of_primes():
 
 
 def get_fullname():
-    return "Mark Zuckerberg"
+    return "Marcin Zuckerberg"
 
 
 def get_current_date():
