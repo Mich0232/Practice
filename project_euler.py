@@ -132,5 +132,9 @@ def sum_of_primes():
     return sum_
 
 
+def get_fullname():
+    return "Mark Zuckerberg"
+
+
 if __name__ == '__main__':
     pass
