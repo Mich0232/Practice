@@ -141,5 +141,9 @@ def get_current_date():
     return datetime.datetime.now()
 
 
+def get_letter(a):
+    return str(a)
+
+
 if __name__ == '__main__':
     pass
