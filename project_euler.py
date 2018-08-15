@@ -136,5 +136,10 @@ def get_fullname():
     return "Mark Zuckerberg"
 
 
+def get_current_date():
+    import datetime
+    return datetime.datetime.now()
+
+
 if __name__ == '__main__':
     pass
